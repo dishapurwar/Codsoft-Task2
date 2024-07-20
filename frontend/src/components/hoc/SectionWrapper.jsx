@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
-import { styles } from "C:/Users/HP/Downloads/mernPortfolio-master/mernPortfolio-master/frontend/src/style.js";
-import { staggerContainer } from "C:/Users/HP/Downloads/mernPortfolio-master/mernPortfolio-master/frontend/src/components/utils/motion.js";
+import { styles } from "../../style";
+import { staggerContainer } from "../utils/motion";
 
 const StarWrapper = (Component, idName) =>
   function HOC() {

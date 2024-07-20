@@ -1,15 +1,12 @@
 
-
-
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { styles } from "../style";
+import { EarthCanvas } from "./canvas/index";
 
-import { styles } from "C:/Users/HP/Downloads/mernPortfolio-master/mernPortfolio-master/frontend/src/style.js";
-import { EarthCanvas } from "C:/Users/HP/Downloads/mernPortfolio-master/mernPortfolio-master/frontend/src/components/canvas/index.js";
-
-import { SectionWrapper } from "C:/Users/HP/Downloads/mernPortfolio-master/mernPortfolio-master/frontend/src/components/hoc/index.js";
-import { slideIn } from "C:/Users/HP/Downloads/mernPortfolio-master/mernPortfolio-master/frontend/src/components/utils/motion.js";
+import { SectionWrapper } from "./hoc/index";
+import { slideIn } from "./utils/motion";
 
 const Contact = () => {
   const formRef = useRef();
