@@ -1,0 +1,345 @@
+.homeCanvas {
+  width: 100vw;
+  height: 100vh;
+  filter: blur(10px);
+  position: absolute;
+}
+
+.homeCanvasContainer {
+  background-color: rgba(0, 0, 0, 0.048);
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeCanvasContainer > h1 {
+  filter: drop-shadow(0 0 2px rgb(28, 116, 216));
+  background-color: white;
+  padding: 2vmax;
+  text-align: center;
+  font: 700 4vmax "Josefin Sans", sans-serif;
+}
+.homeCanvasContainer > h1 > p {
+  transition: all 0.5s;
+  color: rgb(36, 36, 36);
+}
+.homeCanvasContainer > h1 > p:hover {
+  transform: translateY(-10px);
+}
+
+.homeCanvasBox {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  text-align: right;
+  transform: translate(0, -50%);
+}
+
+.homeCanvasBox > h2 {
+  font: 900 4rem "Ubuntu Mono", "Roboto";
+  letter-spacing: 22px;
+  line-height: 130px;
+  color: white;
+}
+.homeCanvasContainer > a {
+  background-color: white;
+  transition: all 0.5s;
+  color: rgb(0, 0, 0);
+  font: 700 1rem "Ubuntu Mono", "Roboto";
+  text-decoration: none;
+  padding: 2vmax 6vmax;
+  box-sizing: border-box;
+  border: 1px solid white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.homeCanvasContainer > a:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.homeScrollBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  border-radius: 100%;
+  transform: translateY(-150%);
+  padding: 0.5vmax;
+  animation: scrollPop 0.5s ease-in infinite alternate;
+}
+.homeScrollBtn > svg {
+  font-size: 3vmax;
+  color: rgb(255, 255, 255);
+}
+
+.homeContainer {
+  background-color: white;
+  padding-top: 6vmax; /* Increased to accommodate larger heading box */
+  border-radius: 300px 300px 200px 200px; /* Adds curve to the top corners */
+  border-bottom: 100px solid white;
+  position: relative;
+  z-index: 1;
+  overflow: hidden; /* Ensure any overflow is hidden for the pseudo-element */
+}
+
+.homeContainer::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-color: white;
+  border-radius: 0 0 50% 50%;
+  z-index: -1;
+}
+
+.timelineHeader {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  background-color: rgb(67, 28, 118);
+  padding: 4vmax 8vmax; /* Increased size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  z-index: 2;
+  font-weight: bold; 
+  font-size: 2.5rem;
+  /* animation: projectHeadingAnimation 1s ease-in-out forwards; */
+}
+
+
+.homeSkills {
+  background-color: #121212; /* Dark theme background */
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skillsHeader {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  background-color: rgb(67, 28, 118);
+  padding: 4vmax 8vmax; /* Increased size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  left: 50%;
+  transform: translate(-50%, -60%); /* Adjusted position */
+  z-index: 2;
+  font-weight: bold;
+  font-size: 2.5rem; /* Increased font size */
+}
+
+.skillsIcon {
+  margin-right: 1rem; /* Space between icon and text */
+  font-size: 2.5rem; /* Size of the icon */
+}
+
+.homeCubesContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: relative;
+  gap: 100px; 
+  margin-top: 200px;
+  margin-bottom: 200px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.homeCubeSkills {
+  width: 200px;
+  height: 200px;
+  animation: cubeRotation 15s linear infinite alternate;
+  transform-style: preserve-3d;
+}
+
+.homeCubeSkillsFaces {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  opacity: 0.7;
+  backface-visibility: hidden; /* Added to hide back faces */
+}
+
+.homeCubeSkillsFaces > img {
+  width: inherit;
+  height: inherit;
+}
+
+.homeCubeSkillsFace1 {
+  transform: translateZ(200px);
+}
+.homeCubeSkillsFace2 {
+  transform: rotateY(51.42deg) translateZ(200px);
+}
+.homeCubeSkillsFace3 {
+  transform: rotateY(102.84deg) translateZ(200px);
+}
+.homeCubeSkillsFace4 {
+  transform: rotateY(154.26deg) translateZ(200px);
+}
+.homeCubeSkillsFace5 {
+  transform: rotateY(205.68deg) translateZ(200px);
+}
+.homeCubeSkillsFace6 {
+  transform: rotateY(257.1deg) translateZ(200px);
+}
+.homeCubeSkillsFace7 {
+  transform: rotateY(308.52deg) translateZ(200px);
+}
+
+.cubeShadow {
+  width: 300px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.171);
+  border-radius: 50%;
+  filter: blur(3px);
+  position: absolute; 
+  top: 220px;
+  left: 50%; 
+  transform: translateX(-50%);
+}
+
+.secondCube .cubeShadow {
+  top: 220px;
+}
+
+.homeskillsBox {
+  background-color: hsl(250, 100%, 75%);
+  padding: 0 2vmax;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: -300px;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.homeskillsBox > svg {
+  font-size: 5vmax;
+  color: rgb(255, 255, 255);
+  transition: all 0.5s;
+  margin: 10px;
+}
+.homeskillsBox > svg:hover {
+  transform: scale(1.5);
+}
+
+.home {
+  background-color: black;
+}
+
+@keyframes cubeRotation {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes cubeShadow {
+  to {
+    transform: scale(1.2) translateY(-10px);
+  }
+}
+
+@keyframes homeskillsBoxAnimationOn {
+  from {
+    right: -300px;
+  }
+  to {
+    right: 40px;
+  }
+}
+
+@keyframes homeskillsBoxAnimationOff {
+  from {
+    right: 40px;
+  }
+  to {
+    right: -300px;
+  }
+}
+
+@keyframes scrollPop {
+  to {
+    transform: translateY(-200%);
+  }
+}
+@keyframes projectHeadingAnimation {
+  to {
+    transform: translate(-50%, 0);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .homeCanvasContainer > h1 {
+    font-size: 3vmax;
+  }
+
+  .homeCanvasBox > h2 {
+    font-size: 3rem;
+    letter-spacing: 15px;
+    line-height: 100px;
+  }
+
+  .homeCanvasContainer > a {
+    padding: 2vmax 4vmax;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .homeCanvasContainer > h1 {
+    font-size: 4vmax;
+  }
+
+  .homeCanvasBox > h2 {
+    font-size: 2rem;
+    letter-spacing: 10px;
+    line-height: 80px;
+  }
+
+  .homeCanvasContainer > a {
+    padding: 2vmax 3vmax;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .homeCanvasContainer > h1 {
+    font-size: 5vmax;
+  }
+
+  .homeCanvasBox > h2 {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    line-height: 60px;
+  }
+
+  .homeCanvasContainer > a {
+    padding: 2vmax 2vmax;
+    font-size: 0.6rem;
+  }
+}

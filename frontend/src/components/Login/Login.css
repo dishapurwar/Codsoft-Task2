@@ -1,0 +1,97 @@
+/* Login.css */
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/public/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: #f1f1f1;
+}
+
+.login {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.loginContainer {
+  width: 90%;
+  max-width: 700px;
+  min-height: 70vh;
+  background: rgba(102, 147, 160, 0.1); /* Glassmorphism transparency */
+  backdrop-filter: blur(10px); /* Glassmorphism blur */
+  -webkit-backdrop-filter: blur(15px); /* For Safari */
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px;
+  color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Border inside container */
+}
+
+.adminPanelHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5vmax; /* Adjust gap between letters */
+  color: #fafafa;
+  font-size: 2rem; /* Adjust font size as needed */
+  margin-bottom: 200px; /* Adjust margin as needed */
+}
+
+.loginForm {
+  width: 90%; /* Adjust width as needed */
+  padding: 4vmax; /* Adjust padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+   /* Display form items vertically */
+}
+
+.loginForm > div {
+  width: 100%; /* Adjust width as needed */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.loginForm > div > input {
+  width: 80%; /* Adjust width as needed */
+  padding: 1vmax 2vmax; /* Padding */
+  margin: 1.5vmax; /* Margin */
+  border: 1px solid #aaa; /* Border */
+  border-radius: 50px; /* Border radius */
+  font: 100 1rem "Roboto", sans-serif; /* Font */
+  outline: none; /* Outline */
+  background-color: rgba(255, 255, 255, 0.2); /* Background color */
+  color: #fafafa; /* Text color */
+}
+
+.loginForm > div > button {
+  width: 50%; /* Adjust width as needed */
+  padding: 1vmax; /* Padding */
+  margin-top: 5vmax; /* Margin */
+  background-color: rgb(27, 44, 75);/* Button color */
+  color: #fff; /* Text color */
+  border: none; /* Border */
+  border-radius: 50px; /* Border radius */
+  cursor: pointer; /* Cursor */
+  transition: background-color 0.3s; /* Transition */
+}
+
+.loginForm > div > button:hover {
+  background-color: rgb(17, 34, 65); /* Hover color */
+}

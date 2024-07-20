@@ -1,0 +1,39 @@
+/* Header.css */
+
+.header-container {
+  position: relative;
+  z-index: 10;  /* Ensure the header is above other elements */
+}
+
+/* Custom styles for the navbar icons */
+.custom-navbar .bm-burger-button {
+  top: 10px !important;  /* Adjust the vertical position of the burger icon */
+  left: 10px !important;
+  z-index: 10;   /* Adjust the horizontal position if needed */
+}
+
+.custom-navbar .bm-cross-button {
+  top: 10px !important;  /* Adjust the vertical position of the close button */
+  right: 10px !important; 
+  z-index: 10;  /* Adjust the horizontal position if needed */
+}
+
+.custom-navbar .bm-burger-bars {
+  background: hsl(250, 100%, 75%) !important;  
+  z-index: 10; /* Ensure the burger bars are clearly visible */
+}
+
+.custom-navbar .bm-burger-bars-hover {
+  background: white !important; 
+  z-index: 10;  /* Change the color on hover */
+}
+
+.custom-navbar .bm-cross {
+  background: hsl(250, 100%, 75%) !important; 
+  z-index: 10;  /* Ensure the cross is clearly visible */
+}
+
+.custom-navbar .bm-cross-button:hover .bm-cross {
+  background: white !important; 
+  z-index: 10;  /* Change the color on hover */
+}

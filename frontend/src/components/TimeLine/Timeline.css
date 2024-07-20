@@ -1,0 +1,102 @@
+.homeContainer {
+    background-color: rgb(66, 23, 95);
+    padding-top: 6vmax; /* Increased to accommodate larger heading box */
+    border-radius: 0 0 200px 200px; /* Adds curve to the bottom corners */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .timelineHeader {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    background-color: rgb(67, 28, 118);
+    padding: 3vmax 6vmax; /* Increased size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-weight: bold; /* Make text bold */
+    font-size: 2rem; /* Increase font size */
+    animation: projectHeadingAnimation 1s ease-in-out forwards;
+  }
+  
+  @keyframes projectHeadingAnimation {
+    to {
+      transform: translate(-50%, 0);
+    }
+  }
+  
+  .bg-tertiary {
+    background-color: rgb(66, 23, 95);
+  }
+  
+  .py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-white {
+    color: white;
+  }
+  
+  .bg-purple-900 {
+    background-color: rgb(67, 28, 118);
+  }
+  
+  .py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .rounded-full {
+    border-radius: 9999px;
+  }
+  
+  .animate-projectHeadingAnimation {
+    animation: projectHeadingAnimation 1s ease-in-out forwards;
+  }
+  
+  .relative {
+    position: relative;
+  }
+  
+  .transform {
+    transform: translateY(-50%);
+  }
+  
+
+  
+  .p-5 {
+    padding: 1.25rem;
+  }
+  
+  .mr-4 {
+    margin-right: 1rem;
+  }
+  
