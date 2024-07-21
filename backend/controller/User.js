@@ -428,11 +428,28 @@ export const deleteProject = async (req, res) => {
 
     const user = await User.findById(req.user._id);
 
-    const project = user.projects.find((item) => item._id == id);
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "User not found",
+      });
+    }
+
+    const project = user.projects.find((item) => item._id.toString() === id);
+
+    if (!project) {
+      return res.status(404).json({
+        success: false,
+        message: "Project not found",
+      });
+    }
+
+    // Debug log to verify project details
+    console.log("Deleting project: ", project);
 
     await cloudinary.v2.uploader.destroy(project.image.public_id);
 
-    user.projects = user.projects.filter((item) => item._id != id);
+    user.projects = user.projects.filter((item) => item._id.toString() !== id);
 
     await user.save();
 
@@ -441,6 +458,7 @@ export const deleteProject = async (req, res) => {
       message: "Deleted from Projects",
     });
   } catch (error) {
+    console.error(error);  // Log the error for debugging
     return res.status(400).json({
       success: false,
       message: error.message,
